@@ -21,6 +21,37 @@ async function addCategory(req,res){
     res.json(return_response);
 }
 
+//=============get all catgory=================================
+//This api will get all the test score of candidate
+async function getCategory(req,res){
+    var return_response = { "status": null, "message": null, "data": null } 
+    try {
+        const doc = await Category.find({})
+        return_response.status = 200;
+        return_response.message = "Success";
+        return_response.data = doc;
+    } catch (error) {
+        return_response.status = 400;
+        return_response.message = String(error);
+    }
+    res.json(return_response);
+}
+
+//============delete category========================================
+async function deleteCcategory(req,res){
+var return_response = { "status": null, "message": null, "data": {} } 
+try {
+    const doc = await Category.findByIdAndDelete({_id:req.params.id})
+    return_response.status = 200;
+    return_response.message = "Category deleted successfully";
+    return_response.data = doc;
+} catch (error) {
+    return_response.status = 400;
+    return_response.message = String(error);
+}
+res.json(return_response);
+}
+
 
 
 
@@ -30,7 +61,9 @@ async function addCategory(req,res){
 
 
 return {
-    addCategory
+    addCategory,
+    getCategory,
+    deleteCcategory
 }
 
 }
