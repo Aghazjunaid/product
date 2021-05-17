@@ -14,6 +14,7 @@ apiRouter.get('/category', product.getCategory);
 apiRouter.delete('/category/:id', product.deleteCcategory);
 
 //========================product api===================
+apiRouter.post('/product', product.addProduct);
 
 
 
