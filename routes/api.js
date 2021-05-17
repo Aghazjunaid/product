@@ -13,11 +13,7 @@ apiRouter.post('/category', product.addCategory);
 apiRouter.get('/category', product.addCategory);
 apiRouter.delete('/category/:id', product.deleteCcategory);
 
-//========================test score api===================
-apiRouter.post('/testScore', score.postTestScore);
-apiRouter.get('/testScore', score.getTestScore);
-apiRouter.get('/highestTestScore', score.getHighestScore);
-apiRouter.get('/averageTestScore', score.getAverageTestScore);
+//========================product api===================
 
 
 
