@@ -10,8 +10,8 @@ apiRouter.get('', (req, res) => {
 
 //=======================category api=====================
 apiRouter.post('/category', product.addCategory);
-//apiRouter.get('/category', product.getCategory);
-//apiRouter.delete('/category/:id', product.deleteCcategory);
+apiRouter.get('/category', product.getCategory);
+apiRouter.delete('/category/:id', product.deleteCcategory);
 
 //========================product api===================
 
