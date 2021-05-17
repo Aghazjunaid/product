@@ -1,7 +1,7 @@
 var express = require('express'),
 apiRouter = express.Router();
 
-product = require('./product')();
+product = require('./product/product')();
 
 
 apiRouter.get('', (req, res) => {
@@ -10,8 +10,8 @@ apiRouter.get('', (req, res) => {
 
 //=======================category api=====================
 apiRouter.post('/category', product.addCategory);
-apiRouter.get('/category', product.addCategory);
-apiRouter.delete('/category/:id', product.deleteCcategory);
+//apiRouter.get('/category', product.getCategory);
+//apiRouter.delete('/category/:id', product.deleteCcategory);
 
 //========================product api===================
 
